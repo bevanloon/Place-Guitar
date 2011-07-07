@@ -80,6 +80,12 @@ class AddGuitar(webapp.RequestHandler):
         else:
             self.redirect('/')
 
+class About(webapp.RequestHandler):
+    def get(self, trailingurl = None):
+      path = os.path.join(os.path.dirname(__file__), 'templates/about.html')
+      self.response.out.write(template.render(path, ""))
+
+
 class Index(webapp.RequestHandler):
     def get(self, trailingurl = None):
       path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
@@ -88,6 +94,7 @@ class Index(webapp.RequestHandler):
 application = webapp.WSGIApplication(
                                      [('/add-guitar', AddGuitar),
                                       (r'/(\d+)/(\d+)/?', GetGuitarImage),
+                                      ('/about', About),
                                       ('/.*', Index),],
                                      debug=True)
 def main():

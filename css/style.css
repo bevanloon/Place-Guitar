@@ -43,7 +43,9 @@ a:visited { color: #4187A0; /*#069;*/ }
   text-align:left;  
 }
 #nut {
-  margin-top:10px;
+  margin-top:30px;
+  border-top:1px solid #666666;
+  padding: 8px 0;
   text-align:left;
 }
 p {
