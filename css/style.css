@@ -51,14 +51,19 @@ a:visited { color: #4187A0; /*#069;*/ }
 p {
   margin-bottom:10px;
 }
+
+div {
+  margin-bottom:10px;
+}
+
 .code {
   font-family: monospace;
   background-color:#50282f; /* #4A410D;*/
   font-size: 120%;
-  padding: 2px 3px;
+  padding: 3px 3px;
   margin-top:5px;
   margin-bottom: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #50282f;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
