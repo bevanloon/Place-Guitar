@@ -1,0 +1,15 @@
+{% extends "basetemplate.html" %}
+
+{% block title %} | Add Guitar{% endblock %}
+
+{% block contenth1 %}Add Guitar{% endblock %}
+
+{% block content %}
+<form action="/add-guitar" method="post" enctype="multipart/form-data" >
+    <div><label for="title">Name</label></div>
+    <div><input type="text" name="guitarname" /></div>
+    <div><label for="image">Image</label></div>
+    <div><input type="file" name="guitarimage" /></div>
+    <div><input type="submit" value="Add" class="thebutton" /></div>
+</form>
+{% endblock %}

@@ -1,0 +1,108 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+  background: #20282f;
+  color:#c6c6c6;
+  padding-top: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+/**** LINKS ****/
+a { color: #4187A0; /* #DACCB6; #09c*/;  text-decoration: none; font-weight:bold; }
+a:hover { color: #DACCBf; /*#069;*/  text-decoration: underline; }
+a:visited { color: #4187A0; /*#069;*/ }
+
+
+/**** MAIN ****/
+#wrap {
+  margin: 0 auto;
+  width:725px;
+  text-align:center;
+}
+
+#menu {
+  margin:5px 0 5px 0;
+  padding: 5px;
+  text-align:right;
+  background: #20282f;
+  color: #666666;
+}
+
+#headstock {
+  text-align:left;
+  padding:5px 0 20px 0px;
+}
+#neck {
+  text-align:left;  
+}
+#nut {
+  margin-top:10px;
+  text-align:left;
+}
+p {
+  margin-bottom:10px;
+}
+.code {
+  font-family: monospace;
+  background-color:#50282f; /* #4A410D;*/
+  font-size: 120%;
+  padding: 2px 3px;
+  margin-top:5px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+ul {
+  list-style:none;
+}
+
+.powerchord {
+  font-weight:bold;
+}
+
+/**** FORMS ****/
+textarea {
+	width:650px;
+	height: 50px;
+}
+
+.thebutton {
+	background-color:#BE3C14;
+	border:0 none;
+	color:#eee;
+	cursor:pointer;
+	font-weight:bold;
+	letter-spacing:1px;
+	margin:15px 0 32px;
+	padding:8px 15px;
+}
+.thebutton:focus, .thebutton:hover {
+	background-color: #2b3c34;
+	color: #aaa;
+}
+
+label {font-weight:bold; font-size:18px;}
+fieldset {padding:0 1.4em 1.4em 1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+legend {font-weight:bold;font-size:1.2em;margin-top:-0.2em;margin-bottom:1em;}
+input {font-size:0.8em;margin:0.5em 0 2em 0; }
+fieldset, #IE8#HACK {padding-top:1.4em;}
+legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
+input[type=text], input[type=password], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+select {background-color:#fff;border-width:1px;border-style:solid;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {padding: 5px 2px; width:300px;}
+input[type=file] {color:#c6c6c6;}
+

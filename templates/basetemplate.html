@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /> 
+		<title>Place Guitar {% block title %}{% endblock %}</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href="/css/style.css" />
+	</head>
+	<body>
+      <div id="wrap">
+	      <div id="headstock">
+	        {% block header %} {% endblock %}
+          <div id="menu"><a href="http://www.placeguitar.com">home</a> | <a href="http://www.placeguitar.com/about">about</a></div>
+	      </div>
+        <div id="neck">	  
+      		  {% block content %}{% endblock %}
+        	</div>
+        	<div id="nut">
+      	    <p>by <a href="http://twitter.com/poissonpie">@poissonpie</a></p>
+      	  </div>
+      </div>
+	</body>
+</html>
+
