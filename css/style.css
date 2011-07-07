@@ -21,6 +21,11 @@ a:visited { color: #4187A0; /*#069;*/ }
 
 
 /**** MAIN ****/
+h2 {
+  font-size:20px;
+  margin-bottom:8px;
+}
+
 #wrap {
   margin: 0 auto;
   width:725px;
@@ -53,8 +58,9 @@ p {
 }
 
 div {
-  margin-bottom:10px;
+  margin-bottom:15px;
 }
+
 
 .code {
   font-family: monospace;
