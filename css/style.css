@@ -21,6 +21,9 @@ a:visited { color: #4187A0; /*#069;*/ }
 
 
 /**** MAIN ****/
+div {
+  margin-bottom:30px;
+}
 h2 {
   font-size:20px;
   margin-bottom:8px;
@@ -57,9 +60,7 @@ p {
   margin-bottom:10px;
 }
 
-div {
-  margin-bottom:20px;
-}
+
 
 
 .code {
