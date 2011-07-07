@@ -32,6 +32,11 @@ class GetGuitarImage(webapp.RequestHandler):
       required_height = int(aheight)
     except:
       required_height = an_image.height
+
+    if required_width > 2000:
+      required_width = 2000
+    if required_height > 2000:
+      required_height = 2000
     
     #work out our aspect ratios
     current_aspect_ratio = float(an_image.width) / float(an_image.height)
