@@ -15,6 +15,7 @@ class Guitars(db.Model):
 
 class GetGuitarImage(webapp.RequestHandler):
   def get(self, awidth=None, aheight=None):
+    #get a random guitar using our "rand" in the model
     rand_number = random.random()
     guitar_to_display = Guitars.all().order('rand').filter('rand >=', rand_number).get()
     if guitar_to_display is None:
@@ -33,6 +34,7 @@ class GetGuitarImage(webapp.RequestHandler):
     except:
       required_height = an_image.height
 
+    #hard limit at 2000px - design decision
     if required_width > 2000:
       required_width = 2000
     if required_height > 2000:
@@ -41,6 +43,7 @@ class GetGuitarImage(webapp.RequestHandler):
     #work out our aspect ratios
     current_aspect_ratio = float(an_image.width) / float(an_image.height)
     required_aspect_ratio = float(required_width) / float(required_height)
+    
     if current_aspect_ratio > required_aspect_ratio:
       #resize height, crop width
       an_image.resize(height = required_height)
@@ -72,6 +75,7 @@ class AddGuitar(webapp.RequestHandler):
             self.redirect(users.create_login_url(self.request.uri))
     def post(self):
         if users.get_current_user():
+            #TODO add form validation - just make it quick and dirty for now
             guitar = Guitars()
             #first, the easy request items
             guitar.name = self.request.get('guitarname')
