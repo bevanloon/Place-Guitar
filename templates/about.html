@@ -7,9 +7,10 @@
 {% block content %}
   <div>
     <h2>Background</h2>
-    <p>I hacked place guitar together over a few evenings, having taken inspiration from a tweet by <a href="http://twitter.com/#!/zedshaw/status/88126558686019584">Zed Shaw</a> (thanks Zed!).</p>
+    <p>Inspired by a  <a href="http://twitter.com/#!/zedshaw/status/88126558686019584">tweet</a>, <a href="http://twitter.com/poissonpie">I</a> hacked this together over a few evenings.</p>
     <p>It is written in Python, and hosted on Google App Engine.</p>
-    <p>The source, in all its glory (yes that is irony), is on <a href="https://github.com/poissonpie/Place-Guitar">github</a>.</p>
+    <p>Because the App Engine image service doesn't really allow full control over images, you will probably get an image that has been slightly cropped one way or another. App Engine will resize images, but it always respects the aspect ratio. That doesn't allow for true scalling of images, so I've faked it by sizing the image up and then cropping it to the correct dimensions. In retrospect, though it annoyed me while I was trying to hack this together quickly, it is probably a good thing because it would look pretty strange if I started returning images that were scaled without regard to the aspect ratio - sort of reminiscent of those badly designed web pages that we've all come across where an 800 x 600 image was forced into an img tag with 400 x 400 dimensions.<p>
+    <p>The source, in all its glory (yes that is irony), is on <a href="https://github.com/poissonpie/Place-Guitar">github</a>. I only really play in Python part time and I expect the code reflects that.</p>
   </div>
   <div>
     <h2>Alternatives</h2>
@@ -28,6 +29,10 @@
       <li><a href="http://commons.wikimedia.org/wiki/File:BACCHUS.jpg">Hyperion</a></li>
       <li><a href="http://commons.wikimedia.org/wiki/File:Fender_strat.jpg">Strat</a></li>
       <li><a href="http://www.flickr.com/photos/watt_dabney/">Watt Dabney</a></li>
+      <li><a title='By Nettrom' href='http://commons.wikimedia.org/wiki/File:Suhr_Classic_T_Tobacco_Burst.jpg'>Suhr Classic</a></li>
+      <li><a title='J.Peters' href='http://commons.wikimedia.org/wiki/File:Prscustom22.jpg'>PRS Custom</a></li>
+      <li><a title='By Toni makina' href='http://commons.wikimedia.org/wiki/File:Bc_rich.jpg'>BC Rich</a></li>
+      <li><a title='By User:Maxo' href='http://commons.wikimedia.org/wiki/File:Epiphone_Casino_VT.jpg'>Epiphone Casino</a></li>
     </ul>
   </div>
 {% endblock %}
