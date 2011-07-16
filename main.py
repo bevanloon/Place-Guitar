@@ -7,6 +7,10 @@ from google.appengine.api import users
 from google.appengine.ext import db
 from google.appengine.api import images
 
+class IncomingRequests(db.Model):
+    headers = db.TextProperty()
+    remote_addr = db.StringProperty()
+    date = db.DateTimeProperty(auto_now=True)
 
 class Guitars(db.Model):
     name = db.StringProperty()
@@ -15,6 +19,12 @@ class Guitars(db.Model):
 
 class GetGuitarImage(webapp.RequestHandler):
   def get(self, awidth=None, aheight=None):
+    #log the request - super basic logging - just throw the headers into a text and grab the remote address
+    ir = IncomingRequests()
+    ir.headers = str(self.request.headers)
+    ir.remote_addr = self.request.remote_addr
+    ir.put()
+    
     #get a random guitar using our "rand" in the model
     rand_number = random.random()
     guitar_to_display = Guitars.all().order('rand').filter('rand >=', rand_number).get()
@@ -89,6 +99,17 @@ class AddGuitar(webapp.RequestHandler):
         else:
             self.redirect('/')
 
+class Ting(webapp.RequestHandler):
+    def get(self):
+      self.response.out.write(self.request.headers)
+      self.response.out.write(self.request.remote_addr)
+      #for field in self.request.headers:
+      #  value = self.request.headers[field]
+      #  self.response.out.write(field)
+      #  self.response.out.write(' ')
+      #  self.response.out.write(value)
+      #  self.response.out.write('<br /><br />')
+      
 class About(webapp.RequestHandler):
     def get(self, trailingurl = None):
       path = os.path.join(os.path.dirname(__file__), 'templates/about.html')
@@ -102,6 +123,7 @@ class Index(webapp.RequestHandler):
 
 application = webapp.WSGIApplication(
                                      [('/add-guitar', AddGuitar),
+                                      ('/ting', Ting),
                                       (r'/(\d+)/(\d+)/?', GetGuitarImage),
                                       ('/about', About),
                                       ('/.*', Index),],
