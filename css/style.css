@@ -61,7 +61,9 @@ p {
 }
 
 
-
+#social-butterfly {
+  text-align:left;
+}
 
 .code {
   font-family: monospace;
