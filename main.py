@@ -99,17 +99,6 @@ class AddGuitar(webapp.RequestHandler):
         else:
             self.redirect('/')
 
-class Ting(webapp.RequestHandler):
-    def get(self):
-      self.response.out.write(self.request.headers)
-      self.response.out.write(self.request.remote_addr)
-      #for field in self.request.headers:
-      #  value = self.request.headers[field]
-      #  self.response.out.write(field)
-      #  self.response.out.write(' ')
-      #  self.response.out.write(value)
-      #  self.response.out.write('<br /><br />')
-      
 class About(webapp.RequestHandler):
     def get(self, trailingurl = None):
       path = os.path.join(os.path.dirname(__file__), 'templates/about.html')
@@ -123,7 +112,6 @@ class Index(webapp.RequestHandler):
 
 application = webapp.WSGIApplication(
                                      [('/add-guitar', AddGuitar),
-                                      ('/ting', Ting),
                                       (r'/(\d+)/(\d+)/?', GetGuitarImage),
                                       ('/about', About),
                                       ('/.*', Index),],
